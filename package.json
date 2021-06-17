@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "cross-env NODE_ENV=test vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && node build/publish",
     "lint": "vue-cli-service lint",
     "test": "jest"
   },
@@ -42,6 +42,7 @@
     "mockjs": "^1.1.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
+    "ssh2-sftp-client": "^6.0.1",
     "typescript": "^4.1.5"
   }
 }
