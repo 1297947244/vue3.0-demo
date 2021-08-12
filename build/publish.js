@@ -8,12 +8,11 @@ sftp.connect({
   host: '101.34.20.64',
   port: 22,
   username: 'root',
-  password: ''
+  password: 'Xiong0911chao!'
 }).then(() => {
   console.log('连接成功')
   return sftp.rmdir(`${remotePath}`, true)
 }).then(async () => {
-  console.log('删除成功')
   console.log('创建js,css,img,fonts文件')
   await sftp.mkdir(`${remotePath}`, true)
   await sftp.mkdir(`${remotePath}/css`, true)
