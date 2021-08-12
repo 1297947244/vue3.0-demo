@@ -1,19 +1,20 @@
 <template>
-  <el-container>
-    <el-header>Header</el-header>
-    <el-container>
-      <el-aside width="200px">
-        <div id="nav">
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-        </div>
-      </el-aside>
-      <el-main>
-        <router-view/>
-      </el-main>
-    </el-container>
-  </el-container>
+  <Menu />
+  <div class="router_view">
+  <router-view/>
+</div>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Menu from '@/components/Menu.vue'
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    Menu
+  }
+})
+</script>
 
 <style lang="scss">
 html, body {
@@ -27,7 +28,15 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000;
+}
+.router_view {
+  padding-top: 60px;
+  height: calc(100% - 60px);
+  width: 100%;
+  background-color: #6E92D0;
+  background-image: url(./assets/home_bg.jpeg);
+  background-size: 100% 100%;
 }
 
 #nav {
