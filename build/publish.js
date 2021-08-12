@@ -8,7 +8,7 @@ sftp.connect({
   host: '101.34.20.64',
   port: 22,
   username: 'root',
-  password: 'Xiong0911chao!'
+  password: ''
 }).then(() => {
   console.log('连接成功')
   return sftp.rmdir(`${remotePath}`, true)
